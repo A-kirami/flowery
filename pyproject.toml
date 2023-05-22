@@ -1,6 +1,6 @@
 [project]
 name = "flowery"
-version = "0.0.0"
+version = "0.0.1"
 description = "💐 Python image processing library focusing on drawing"
 authors = [{ name = "Akirami", email = "akiramiaya@outlook.com" }]
 requires-python = ">=3.10,<4.0"
