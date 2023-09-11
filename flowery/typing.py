@@ -9,5 +9,14 @@ T_Mode: TypeAlias = Literal[
 ]
 T_Pos: TypeAlias = tuple[int, int]
 T_Format: TypeAlias = Literal["png", "jpg", "jpeg", "bmp", "tiff", "webp"]
-T_Color: TypeAlias = str | float | tuple[float, ...]
+T_Color: TypeAlias = (
+    int
+    | tuple[int]
+    | tuple[int, int]
+    | tuple[int, int, int]
+    | tuple[int, int, int, int]
+    | str
+    | float
+    | tuple[float]
+)
 T_Resample: TypeAlias = Literal[0, 1, 2, 3, 4, 5]

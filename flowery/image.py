@@ -254,7 +254,7 @@ class Imager:
         formats: list[T_Format] | tuple[T_Format, ...] | None = None,
     ) -> Self:
         """打开指定的图像"""
-        return cls(PILImg.open(file, "r", formats))
+        return cls(PILImg.open(file, "r", formats))  # type: ignore
 
     @classmethod
     def new(
@@ -263,7 +263,7 @@ class Imager:
         """创建一个具有给定模式和大小的新图像"""
         if isinstance(size, int):
             size = (size, size)
-        return cls(PILImg.new(mode, size, color))  # type: ignore
+        return cls(PILImg.new(mode, size, color or 0))
 
     @classmethod
     def has_transparency(cls, image: Self) -> bool:
